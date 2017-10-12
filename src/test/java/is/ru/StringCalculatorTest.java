@@ -8,4 +8,8 @@ public class StringCalculatorTest {
 	public void shouldReturnZeroOnEmpty() {
 		assertEquals(0, StringCalculator.Add(""));
 	}
+
+	public void shouldReturnOneNumber() {
+		assertEquals(1, StringCalculator.Add("1"));
+	}
 }
