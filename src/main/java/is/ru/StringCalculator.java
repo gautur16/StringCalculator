@@ -6,6 +6,7 @@ public class StringCalculator {
 	        	return 0;
 	       	else {
 	       		if(numbers.contains(",")){
+	       			numbers = ignoreNewLine(numbers);
 	       			String tiles[] = numbers.split(",");
 	       			return sum(tiles);
 	       		}
@@ -23,5 +24,10 @@ public class StringCalculator {
 				total +=toInt(numbers);
 			}
 			return total;
+		}
+
+		private static String ignoreNewLine(String numbers){
+			numbers = numbers.replaceAll("\n", ",");
+			return numbers;
 		}
 }

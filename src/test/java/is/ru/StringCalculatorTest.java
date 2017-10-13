@@ -20,4 +20,8 @@ public class StringCalculatorTest {
 	public void shouldReturnSumOfMultipleNumbers() {
 		assertEquals(6, StringCalculator.Add("1,2,3"));
 	}
+
+	public void shouldReplaceNewLineWithComma() {
+		assertEquals(6, StringCalculator.Add("1\n2,3"));
+	}
 }
