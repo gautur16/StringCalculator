@@ -15,8 +15,7 @@ public class StringCalculator {
 	       				}
 	       			}
 
-	       			if(!noOfNeg.equals(""))
-	       			{
+	       			if(!noOfNeg.equals("")){
 	       				throw new IllegalArgumentException("Negatives not allowed: " + noOfNeg);
 	       			}
 

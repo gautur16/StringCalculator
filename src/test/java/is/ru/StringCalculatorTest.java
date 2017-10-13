@@ -28,8 +28,8 @@ public class StringCalculatorTest {
 	public void shouldThrowExceptionIfNegativeNumbersAreUsed() {
 		StringCalculator.Add("-1,-2,3,4,-5");
 	}
-
-	//public void shouldJustReturnNumbersLessThan1000() {
-	//	assertEquals(1002, StringCalculator.Add(2,1001,1000));
-	//}
+	
+	public void shouldJustReturnNumbersLessThan1000() {
+		assertEquals(2, StringCalculator.Add("2,1001"));
+	}
 }
