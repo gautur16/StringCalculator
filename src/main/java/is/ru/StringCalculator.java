@@ -8,6 +8,18 @@ public class StringCalculator {
 	       		if(numbers.contains(",")){
 	       			numbers = ignoreNewLine(numbers);
 	       			String tiles[] = numbers.split(",");
+	       			
+	       			String noOfNeg = "";
+	       			for(String block : tiles){
+	       				if(toInt(block) < 0){
+	       					noOfNeg +=block + " ";
+	       				}
+	       			}
+
+	       			if(!noOfNeg.equals(""))
+	       			{
+	       				throw new IllegalArgumentException("Negatives not allowed: " + noOfNeg);
+	       			}
 	       			return sum(tiles);
 	       		}
 	       	}

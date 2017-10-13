@@ -24,4 +24,8 @@ public class StringCalculatorTest {
 	public void shouldReplaceNewLineWithComma() {
 		assertEquals(6, StringCalculator.Add("1\n2,3"));
 	}
+	
+	public void shouldThrowExceptionIfNegativeNumbersAreUsed() {
+		StringCalculator.Add("-1,-2,3,4,-5");
+	}
 }
