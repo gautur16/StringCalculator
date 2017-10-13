@@ -8,7 +8,6 @@ public class StringCalculator {
 	       		if(numbers.contains(",")){
 	       			numbers = ignoreNewLine(numbers);
 	       			String tiles[] = numbers.split(",");
-	       			
 	       			String noOfNeg = "";
 	       			for(String block : tiles){
 	       				if(toInt(block) < 0){
@@ -20,6 +19,7 @@ public class StringCalculator {
 	       			{
 	       				throw new IllegalArgumentException("Negatives not allowed: " + noOfNeg);
 	       			}
+
 	       			return sum(tiles);
 	       		}
 	       	}
@@ -33,7 +33,12 @@ public class StringCalculator {
 		private static int sum(String [] tiles){
 			int total = 0;
 			for(String numbers : tiles){
-				total +=toInt(numbers);
+				if (toInt(numbers) > 1000){
+					continue;
+				}
+				else{
+					total +=toInt(numbers);
+				}
 			}
 			return total;
 		}
