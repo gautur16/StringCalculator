@@ -16,4 +16,8 @@ public class StringCalculatorTest {
 	public void shouldReturnSumOnTwoNumbers() {
 		assertEquals(3, StringCalculator.Add("1,2"));
 	}
+
+	public void shouldReturnSumOfMultipleNumbers() {
+		assertEquals(6, StringCalculator.Add("1,2,3"));
+	}
 }
