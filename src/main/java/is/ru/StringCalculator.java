@@ -46,4 +46,17 @@ public class StringCalculator {
 			numbers = numbers.replaceAll("\n", ",");
 			return numbers;
 		}
+
+		private static String[] differentDeliminator(String numbers){
+			String delim = ",|\n";
+			if (numbers.startsWith("//")){
+				int delimIndex = numbers.indexOf("//") + 2;
+				delim = delim + "|" + numbers.substring(delimIndex, delimIndex + 1);
+				numbers = numbers.substring(delimIndex + 2);
+				return numbers.split(delim);
+			}
+			else {
+				return numbers.split(delim);	
+			}
+		}
 }

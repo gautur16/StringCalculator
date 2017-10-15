@@ -32,4 +32,8 @@ public class StringCalculatorTest {
 	public void shouldJustReturnNumbersLessThan1000() {
 		assertEquals(2, StringCalculator.Add("2,1001"));
 	}
+
+	public void shouldHandleDifferentDelimiter() {
+		assertEquals(3, StringCalculator.Add("//;\n1;2;3"));
+	}
 }
